@@ -1,8 +1,5 @@
-06/11/2023 16:47:56 - WARNING - __main__ - Process rank: 2, device: cuda:2, n_gpu: 1distributed training: True, 16-bits training: False
-06/11/2023 16:47:56 - WARNING - __main__ - Process rank: 1, device: cuda:1, n_gpu: 1distributed training: True, 16-bits training: False
-06/11/2023 16:47:56 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: False
-06/11/2023 16:47:56 - WARNING - __main__ - Process rank: 3, device: cuda:3, n_gpu: 1distributed training: True, 16-bits training: False
-06/11/2023 16:47:56 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+06/11/2023 17:25:40 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: False
+06/11/2023 17:25:40 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
 _n_gpu=1,
 adafactor=False,
 adam_beta1=0.9,
@@ -51,14 +48,14 @@ include_inputs_for_metrics=False,
 jit_mode_eval=False,
 label_names=None,
 label_smoothing_factor=0.0,
-learning_rate=5e-05,
+learning_rate=0.0001,
 length_column_name=length,
 load_best_model_at_end=False,
 local_rank=0,
 log_level=passive,
 log_level_replica=warning,
 log_on_each_node=True,
-logging_dir=./checkpoints_bsln/runs/Jun11_16-47-55_fafe12f6a432,
+logging_dir=./checkpoints_bsln/runs/Jun11_17-25-38_fafe12f6a432,
 logging_first_step=True,
 logging_nan_inf_filter=True,
 logging_steps=500,
@@ -73,7 +70,7 @@ num_train_epochs=40.0,
 optim=adamw_hf,
 optim_args=None,
 output_dir=./checkpoints_bsln,
-overwrite_output_dir=False,
+overwrite_output_dir=True,
 past_index=-1,
 per_device_eval_batch_size=8,
 per_device_train_batch_size=8,
@@ -107,54 +104,57 @@ use_legacy_prediction_loop=False,
 use_mps_device=False,
 warmup_ratio=0.0,
 warmup_steps=0,
-weight_decay=0.0,
+weight_decay=0.01,
 xpu_backend=None,
 )
-06/11/2023 16:47:58 - WARNING - datasets.builder - Found cached dataset wikipedia (/root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
-06/11/2023 16:47:59 - WARNING - datasets.builder - Found cached dataset wikipedia (/root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
-06/11/2023 16:47:59 - INFO - datasets.info - Loading Dataset Infos from /root/.cache/huggingface/modules/datasets_modules/datasets/wikipedia/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559
-06/11/2023 16:47:59 - INFO - datasets.builder - Overwrite dataset info from restored data version if exists.
-06/11/2023 16:47:59 - INFO - datasets.info - Loading Dataset info from /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559
-06/11/2023 16:47:59 - WARNING - datasets.builder - Found cached dataset wikipedia (/root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
-06/11/2023 16:47:59 - INFO - datasets.info - Loading Dataset info from /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559
-06/11/2023 16:47:59 - WARNING - datasets.builder - Found cached dataset wikipedia (/root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
-06/11/2023 16:48:01 - INFO - datasets.info - Loading Dataset Infos from /root/.cache/huggingface/modules/datasets_modules/datasets/wikipedia/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559
-06/11/2023 16:48:01 - INFO - datasets.builder - Overwrite dataset info from restored data version if exists.
-06/11/2023 16:48:01 - INFO - datasets.info - Loading Dataset info from /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559
-06/11/2023 16:48:01 - WARNING - datasets.builder - Found cached dataset wikipedia (/root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
-06/11/2023 16:48:01 - INFO - datasets.info - Loading Dataset info from /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559
-06/11/2023 16:48:02 - WARNING - datasets.builder - Found cached dataset wikipedia (/root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
-06/11/2023 16:48:02 - WARNING - datasets.builder - Found cached dataset wikipedia (/root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
-06/11/2023 16:48:03 - WARNING - datasets.builder - Found cached dataset wikipedia (/root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
-06/11/2023 16:48:04 - INFO - datasets.info - Loading Dataset Infos from /root/.cache/huggingface/modules/datasets_modules/datasets/wikipedia/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559
-06/11/2023 16:48:04 - INFO - datasets.builder - Overwrite dataset info from restored data version if exists.
-06/11/2023 16:48:04 - INFO - datasets.info - Loading Dataset info from /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559
-06/11/2023 16:48:04 - WARNING - datasets.builder - Found cached dataset wikipedia (/root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
-06/11/2023 16:48:04 - INFO - datasets.info - Loading Dataset info from /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559
-06/11/2023 16:48:04 - WARNING - __main__ - You are instantiating a new config instance from scratch.
-06/11/2023 16:48:04 - WARNING - datasets.builder - Found cached dataset wikipedia (/root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
-06/11/2023 16:48:04 - WARNING - __main__ - You are instantiating a new config instance from scratch.
-06/11/2023 16:48:04 - WARNING - datasets.builder - Found cached dataset wikipedia (/root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
-06/11/2023 16:48:04 - WARNING - __main__ - You are instantiating a new config instance from scratch.
-06/11/2023 16:48:05 - INFO - __main__ - Training new model from scratch
-06/11/2023 16:48:05 - WARNING - datasets.builder - Found cached dataset wikipedia (/root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
-06/11/2023 16:48:05 - WARNING - __main__ - You are instantiating a new config instance from scratch.
-06/11/2023 16:48:07 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-834bda2f181787db.arrow
-06/11/2023 16:48:07 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-b9f9e6ea127e2e2d.arrow
-06/11/2023 16:48:11 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-8ea4d4d398a92aa3.arrow
-06/11/2023 16:48:11 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-6eaec606d2fc3c89.arrow
-06/11/2023 16:48:11 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-834bda2f181787db.arrow
-06/11/2023 16:48:11 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-834bda2f181787db.arrow
-06/11/2023 16:48:11 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-834bda2f181787db.arrow
-06/11/2023 16:48:11 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-b9f9e6ea127e2e2d.arrow
-06/11/2023 16:48:11 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-b9f9e6ea127e2e2d.arrow
-06/11/2023 16:48:11 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-b9f9e6ea127e2e2d.arrow
-06/11/2023 16:48:11 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-8ea4d4d398a92aa3.arrow
-06/11/2023 16:48:11 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-8ea4d4d398a92aa3.arrow
-06/11/2023 16:48:11 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-8ea4d4d398a92aa3.arrow
-06/11/2023 16:48:11 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-6eaec606d2fc3c89.arrow
-06/11/2023 16:48:11 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-6eaec606d2fc3c89.arrow
-06/11/2023 16:48:11 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-6eaec606d2fc3c89.arrow
-{'loss': 10.471, 'learning_rate': 4.999951286048324e-05, 'epoch': 0.0}
-{'loss': 7.0714, 'learning_rate': 4.97564302416212e-05, 'epoch': 0.19}
-{'eval_loss': 6.825170516967773, 'eval_accuracy': 0.12608435999206388, 'eval_runtime': 63.6021, 'eval_samples_per_second': 206.22, 'eval_steps_per_second': 6.446, 'epoch': 0.19}
+06/11/2023 17:25:40 - WARNING - __main__ - Process rank: 1, device: cuda:1, n_gpu: 1distributed training: True, 16-bits training: False
+06/11/2023 17:25:40 - WARNING - __main__ - Process rank: 2, device: cuda:2, n_gpu: 1distributed training: True, 16-bits training: False
+06/11/2023 17:25:40 - WARNING - __main__ - Process rank: 3, device: cuda:3, n_gpu: 1distributed training: True, 16-bits training: False
+06/11/2023 17:25:42 - WARNING - datasets.builder - Found cached dataset wikipedia (/root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
+06/11/2023 17:25:42 - WARNING - datasets.builder - Found cached dataset wikipedia (/root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
+06/11/2023 17:25:42 - WARNING - datasets.builder - Found cached dataset wikipedia (/root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
+06/11/2023 17:25:43 - INFO - datasets.info - Loading Dataset Infos from /root/.cache/huggingface/modules/datasets_modules/datasets/wikipedia/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559
+06/11/2023 17:25:43 - INFO - datasets.builder - Overwrite dataset info from restored data version if exists.
+06/11/2023 17:25:43 - INFO - datasets.info - Loading Dataset info from /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559
+06/11/2023 17:25:43 - WARNING - datasets.builder - Found cached dataset wikipedia (/root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
+06/11/2023 17:25:43 - INFO - datasets.info - Loading Dataset info from /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559
+06/11/2023 17:25:45 - WARNING - datasets.builder - Found cached dataset wikipedia (/root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
+06/11/2023 17:25:45 - INFO - datasets.info - Loading Dataset Infos from /root/.cache/huggingface/modules/datasets_modules/datasets/wikipedia/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559
+06/11/2023 17:25:45 - INFO - datasets.builder - Overwrite dataset info from restored data version if exists.
+06/11/2023 17:25:45 - INFO - datasets.info - Loading Dataset info from /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559
+06/11/2023 17:25:45 - WARNING - datasets.builder - Found cached dataset wikipedia (/root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
+06/11/2023 17:25:45 - WARNING - datasets.builder - Found cached dataset wikipedia (/root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
+06/11/2023 17:25:45 - WARNING - datasets.builder - Found cached dataset wikipedia (/root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
+06/11/2023 17:25:45 - INFO - datasets.info - Loading Dataset info from /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559
+06/11/2023 17:25:47 - WARNING - datasets.builder - Found cached dataset wikipedia (/root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
+06/11/2023 17:25:47 - WARNING - __main__ - You are instantiating a new config instance from scratch.
+06/11/2023 17:25:48 - INFO - datasets.info - Loading Dataset Infos from /root/.cache/huggingface/modules/datasets_modules/datasets/wikipedia/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559
+06/11/2023 17:25:48 - INFO - datasets.builder - Overwrite dataset info from restored data version if exists.
+06/11/2023 17:25:48 - INFO - datasets.info - Loading Dataset info from /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559
+06/11/2023 17:25:48 - WARNING - datasets.builder - Found cached dataset wikipedia (/root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
+06/11/2023 17:25:48 - WARNING - __main__ - You are instantiating a new config instance from scratch.
+06/11/2023 17:25:48 - WARNING - datasets.builder - Found cached dataset wikipedia (/root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
+06/11/2023 17:25:48 - INFO - datasets.info - Loading Dataset info from /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559
+06/11/2023 17:25:48 - WARNING - __main__ - You are instantiating a new config instance from scratch.
+06/11/2023 17:25:48 - WARNING - datasets.builder - Found cached dataset wikipedia (/root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559)
+06/11/2023 17:25:48 - WARNING - __main__ - You are instantiating a new config instance from scratch.
+06/11/2023 17:25:48 - INFO - __main__ - Training new model from scratch
+06/11/2023 17:25:50 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-834bda2f181787db.arrow
+06/11/2023 17:25:50 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-b9f9e6ea127e2e2d.arrow
+06/11/2023 17:25:53 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-8ea4d4d398a92aa3.arrow
+06/11/2023 17:25:53 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-6eaec606d2fc3c89.arrow
+06/11/2023 17:25:53 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-834bda2f181787db.arrow
+06/11/2023 17:25:53 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-834bda2f181787db.arrow
+06/11/2023 17:25:53 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-834bda2f181787db.arrow
+06/11/2023 17:25:53 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-b9f9e6ea127e2e2d.arrow
+06/11/2023 17:25:53 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-b9f9e6ea127e2e2d.arrow
+06/11/2023 17:25:53 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-b9f9e6ea127e2e2d.arrow
+06/11/2023 17:25:53 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-8ea4d4d398a92aa3.arrow
+06/11/2023 17:25:53 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-8ea4d4d398a92aa3.arrow
+06/11/2023 17:25:53 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-8ea4d4d398a92aa3.arrow
+06/11/2023 17:25:53 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-6eaec606d2fc3c89.arrow
+06/11/2023 17:25:53 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-6eaec606d2fc3c89.arrow
+06/11/2023 17:25:53 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-6eaec606d2fc3c89.arrow
+{'loss': 10.471, 'learning_rate': 9.999902572096648e-05, 'epoch': 0.0}
+{'loss': 7.0907, 'learning_rate': 9.95128604832424e-05, 'epoch': 0.19}
+{'eval_loss': 6.78550910949707, 'eval_accuracy': 0.12505147002375847, 'eval_runtime': 63.4879, 'eval_samples_per_second': 206.591, 'eval_steps_per_second': 6.458, 'epoch': 0.19}

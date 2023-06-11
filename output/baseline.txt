@@ -157,3 +157,4 @@ xpu_backend=None,
 06/11/2023 16:48:11 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /root/.cache/huggingface/datasets/wikipedia/20220301.simple/2.0.0/aa542ed919df55cc5d3347f42dd4521d05ca68751f50dbc32bae2a7f1e167559/cache-6eaec606d2fc3c89.arrow
 {'loss': 10.471, 'learning_rate': 4.999951286048324e-05, 'epoch': 0.0}
 {'loss': 7.0714, 'learning_rate': 4.97564302416212e-05, 'epoch': 0.19}
+{'eval_loss': 6.825170516967773, 'eval_accuracy': 0.12608435999206388, 'eval_runtime': 63.6021, 'eval_samples_per_second': 206.22, 'eval_steps_per_second': 6.446, 'epoch': 0.19}
